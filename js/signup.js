@@ -11,7 +11,13 @@ $(function() {
 				contentType: 'application/json',
 				data: json_builder,
 				accepts: "application/json",
-				success: function(response){ alert(response);}
+				success: function(response){ 
+					if(response[0] === "Email already registred"){
+						alert(response);
+					}else{
+						window.location = "../lobby.html";
+					}
+				}
 			});
 		}else{
 			alert("passwords don't match");
