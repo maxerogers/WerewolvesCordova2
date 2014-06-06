@@ -11,7 +11,12 @@ $(function() {
 				contentType: 'application/json',
 				data: json_builder,
 				accepts: "application/json",
-				success: function(response){ alert(response);}
+				success: function(response){ 
+					//TODO Save user information like API Key and UserID
+					//alert(response);
+					//Forward user to lobby
+					window.location = "../lobby.html";
+				}
 			});
 		}else{
 			alert("passwords don't match");
