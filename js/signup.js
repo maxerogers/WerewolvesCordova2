@@ -16,6 +16,7 @@ $(function() {
 					//Forward user to lobby
 					if(response[0] === "Email already registred"){
 						alert(response);
+						document.cookie = response;
 					}else{
 						window.location = "../lobby.html";
 					}

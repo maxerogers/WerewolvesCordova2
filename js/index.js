@@ -11,7 +11,15 @@ $(function() {
             data: json_builder,
             accepts: "application/json",
             success: function(response){
-                alert(response);
+                if(response == "No Email Found"){
+                    alert(response);
+                }else if(response == "Bad Password"){
+                    alert(response);
+                }else{
+                    //alert("logging in");
+                    document.cookie = response;
+                    window.location = "../lobby.html";
+                }
             }
         });
     }
