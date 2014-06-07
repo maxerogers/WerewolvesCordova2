@@ -3,21 +3,31 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/lobby.js"></script>
 		<title>Werewolves</title>
 	</head>
 	<body>
 		<h1>Lobby</h1>
 		<div id="games">
-			<h3> Game01 </h3>
-			<h3> Game02</h3>
+			<h3> Open Games </h3>
+			<ul id="Game List">
+			</ul>
 		</div>
+		<div id="new_game_form">
+		</div>
+		<button id="new_game_btn"> Add New Game</button>
 		<div id="players"> 
-			<h3> Max </h3>
-			<h3> Kenny </h3>
-			<h3> Eve </h3>
-			<h3> Michelle </h3>
+		 	<h3> Players Online </h3>
+			<ul>
+				<li> Max </li>
+				<li> Kenny </li>
+				<li> Eve </li>
+				<li> Michelle </li>
+			</ul>
 		</div>
 		<div id="chat_log">
+			<h3> Chat Log </h3>
 			<p><strong>Max:</strong> howdy everyone </p>
 			<p><strong>Kenny:</strong> Play all da games</p>
 		</div>

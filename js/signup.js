@@ -4,19 +4,11 @@ $(function() {
 			var json_builder = {};
 			json_builder.email = $("#email_input").val();
 			json_builder.password = $("#password_input").val();
-			$.ajax({
-				url: "http://localhost:9393/new_user",
-				type: "GET",
-				dataType: "jsonp",
-				contentType: 'application/json',
-				data: json_builder,
-				accepts: "application/json",
-				success: function(response){ 
-					if(response[0] === "Email already registred"){
-						alert(response);
-					}else{
-						window.location = "../lobby.html";
-					}
+			$.getJSON("http://localhost:9393/new_user", json_builder, function(data){
+				if(response[0] === "Email already registred"){
+					alert(response);
+				}else{
+					window.location = "../lobby.html";
 				}
 			});
 		}else{
